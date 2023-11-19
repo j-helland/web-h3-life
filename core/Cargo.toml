@@ -1,0 +1,21 @@
+[package]
+name = "core"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+lto = true
+opt-level = "z"
+
+[dependencies]
+geojson = "0.24.1"
+getrandom = { version = "0.2.10", features = ["js"] }
+h3o = { version = "0.4.0", features = ["geo"] }
+rand = "0.8.5"
+unreachable = "1.0.0"
+wasm-bindgen = "0.2.87"
+web-sys = { version = "0.3.64", features = ["console"] }
+wkt = "0.10.3"

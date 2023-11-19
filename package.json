@@ -1,0 +1,31 @@
+{
+  "name": "web-geo-indexing",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "build:core": "cd core && wasm-pack build --target web --out-dir pkg",
+    "copy:assets": "cpx 'assets/**' 'dist/assets'",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@maplibre/maplibre-gl-style-spec": "^19.3.3",
+    "core": "file:core/pkg",
+    "cpx": "^1.5.0",
+    "firebase": "^10.6.0",
+    "geojson": "^0.5.0",
+    "html-webpack-plugin": "^5.5.3",
+    "mapbox-gl": "npm:empty-npm-package@^1.0.0",
+    "maplibre-gl": "^3.5.2",
+    "solid-js": "^1.7.8",
+    "solid-map-gl": "^1.10.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5",
+    "vite-plugin-solid": "^2.7.0"
+  }
+}
